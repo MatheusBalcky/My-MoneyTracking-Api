@@ -10,10 +10,10 @@ app.use(cors(), express.json());
 
 app.use(routes);
 
-app.use(errorHandler);
-
 app.get('/test', (req, res) => {
   res.status(200).send('Hello world');
 });
+
+app.use(errorHandler);
 
 export default app;
