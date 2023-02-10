@@ -7,7 +7,7 @@ import { objIsEmpty } from '../utils/tool';
 
 export async function signUp(inputData: interfaces.signUpI) {
   const { username, email, password } = inputData;
-  const errorsMessage: { [key: string]: any } = {};
+  const errorsMessage: { [key: string]: string } = {};
 
   const emailExists = await authRepositories.findUserByEmail(email);
   const usernameExists = await authRepositories.findUserByUsername(username);

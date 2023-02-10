@@ -6,7 +6,7 @@ export async function signUpControll(req: Request, res: Response) {
 
   await authServices.signUp(inputData);
 
-  return res.sendStatus(200);
+  return res.sendStatus(201);
 }
 
 export async function signInControll(req: Request, res: Response) {
